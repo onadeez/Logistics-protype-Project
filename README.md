@@ -126,7 +126,7 @@ sudo systemctl restart ssh
 ## 🔑 Environment Variables (AppSail)
 
 ```env
-SFTP_HOST=35.178.204.42
+SFTP_HOST= "ip address"
 SFTP_PORT=22
 SFTP_USER=sftpuser
 SFTP_PASSWORD=your-password
