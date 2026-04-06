@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "2664000000073001",
+      "name": "logistics-prototype",
+      "domain": {
+        "id": "30041044164",
+        "name": "logistics-prototype-20112042007.development"
+      },
+      "timezone": "Europe/London",
+      "env": [
+        {
+          "idx": 1,
+          "id": "20112042007",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

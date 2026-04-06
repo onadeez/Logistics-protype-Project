@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logistics Shipment Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>🚚 Logistics Shipment Portal</h1>
+      <p>Powered by Zoho Catalyst · SFTP-Ready B2B Prototype</p>
+    </header>
+
+    <!-- Notification Banner -->
+    <div id="notification" class="notification hidden"></div>
+
+    <!-- Shipment Form -->
+    <form id="shipmentForm" class="form-card">
+      <h2>New Shipment</h2>
+
+      <fieldset>
+        <legend>Sender Details</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="senderName">Sender Name *</label>
+            <input type="text" id="senderName" required placeholder="John Doe" />
+          </div>
+          <div class="form-group">
+            <label for="senderEmail">Sender Email *</label>
+            <input type="email" id="senderEmail" required placeholder="john@company.com" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="origin">Origin City / Country *</label>
+          <input type="text" id="origin" required placeholder="Lagos, Nigeria" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Recipient Details</legend>
+        <div class="form-group">
+          <label for="recipientName">Recipient Name *</label>
+          <input type="text" id="recipientName" required placeholder="Acme Corp" />
+        </div>
+        <div class="form-group">
+          <label for="recipientAddress">Recipient Address *</label>
+          <input type="text" id="recipientAddress" required placeholder="123 Main St, London, UK" />
+        </div>
+        <div class="form-group">
+          <label for="destination">Destination City / Country *</label>
+          <input type="text" id="destination" required placeholder="London, UK" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Shipment Details</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="weightKg">Weight (kg) *</label>
+            <input type="number" id="weightKg" min="0.1" step="0.1" required placeholder="5.0" />
+          </div>
+          <div class="form-group">
+            <label for="shipmentType">Shipment Type *</label>
+            <select id="shipmentType" required>
+              <option value="">-- Select --</option>
+              <option value="Standard">Standard</option>
+              <option value="Express">Express</option>
+              <option value="Freight">Freight</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit" id="submitBtn" class="btn-primary">
+        Submit Shipment
+      </button>
+    </form>
+
+    <!-- Shipment Log Table -->
+    <div class="form-card">
+      <h2>Recent Shipments</h2>
+      <button onclick="loadShipments()" class="btn-secondary">↻ Refresh</button>
+      <div id="shipmentsTable"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
